@@ -20,19 +20,20 @@ body {
     color: #333;
 }
 
-
 .container {
     max-width: 1200px;
     margin: 40px auto;
     padding: 20px;
-      display: grid;
+    display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 25px;
 }
+
 .container > h1,
 .container > .subtitle {
     grid-column: 1 / -1;
 }
+
 .card1.borderclor-5,
 .card1.borderclor-6 {
     grid-column: 1 / -1;
@@ -42,16 +43,20 @@ body {
     .container {
         grid-template-columns: 1fr;
     }
+    .main-container {
+        grid-template-columns: 1fr !important;
+    }
 }
+
 .card1 img {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     cursor: pointer;
 }
+
 .card1 img:hover {
     transform: scale(1.08);
     box-shadow: 0 12px 25px rgba(0, 0, 0, 0.25);
 }
-
 
 h1 {
     text-align: center;
@@ -63,14 +68,16 @@ h1 {
     margin-bottom: 40px;
     color: #555;
 }
+
 .card1,
-.card2{
+.card2 {
     background-color: #ffffff;
     margin-bottom: 25px;
     padding: 25px;
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
 }
+
 .card1.borderclor-1{border-top:4px solid red}
 .card1.borderclor-2{border-top:4px solid green}
 .card1.borderclor-3{border-top:4px solid palevioletred}
@@ -78,14 +85,10 @@ h1 {
 .card1.borderclor-5{border-top:4px solid aquamarine}
 .card1.borderclor-6{border-top:4px solid brown}
 
-
-
-
 .card1 h2 {
     color: #1e90ff;
     margin-bottom: 10px;
 }
-
 
 a {
     color: #1e90ff;
@@ -97,7 +100,6 @@ a:hover {
     text-decoration: underline;
 }
 
-
 pre {
     background-color: #f4f6f8;
     padding: 15px;
@@ -107,14 +109,12 @@ pre {
     font-size: 14px;
 }
 
-
 code {
     background-color: #eee;
     padding: 2px 6px;
     border-radius: 4px;
     font-size: 0.95em;
 }
-
 
 button {
     background-color: #1e90ff;
@@ -123,52 +123,124 @@ button {
     padding: 10px 18px;
     border-radius: 6px;
     cursor: pointer;
-    margin-right: 10px;
     margin-top: 10px;
     font-size: 14px;
+    transition: all 0.3s;
 }
 
 button:hover {
     background-color: #1873cc;
 }
 
-
 img {
     border-radius: 8px;
     margin-top: 10px;
 }
 
-
 p {
     margin-top: 8px;
 } 
+
+.note {
+    padding: 10px;
+    margin-top: 10px;
+}
+
 .note::before{
     content: "💡 ";
 }
+
+.main-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.main-container .card {
+    padding: 20px;
+    text-align: center;
+    background: #fff;
+}
+
+.btn-gold-border {
+    background: white !important;
+    color: black !important;
+    border: 2px solid gold !important;
+}
+
+.btn-hover-animation:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.btn-shimmer {
+    background: black !important;
+    color: white !important;
+    border: 2px solid gold !important;
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-shimmer::after {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -150%;
+    width: 50%;
+    height: 200%;
+    background: rgba(255,255,255,0.3);
+    transform: rotate(30deg);
+    transition: 0.6s;
+}
+
+.btn-shimmer:hover::after {
+    left: 150%;
+}
+
+.button14 {
+    width: 160px;
+    height: 60px;
+    color: #fff;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    background-color: #0c0c0c;
+    border-radius: 10px;
+    outline: none;
+    border: none;
+    transition: all 0.3s ease 0s;
+}
+.button14:hover {
+    background-color: #3838ff;
+    color: #fff;
+    transform: translateY(-7px);
+}
+.button14:active {
+    transform: translateY(-1px);
+}
 </style>
+
 <body>
 <div class="container">
 
     <h1>Workshop: Various Links</h1>
     <p class="subtitle">เรียนรู้ลิงค์หลายรูปเเบบ พร้อมตัวอย่างเเละเเบบฝึกหัด</p>
 
-    <!-- Card 1 -->
     <div class="card1 borderclor-1">
         <h2>1. External Links</h2>
-    
-
-    <div class="card2">
-        <a href="https://www.wikipedia.org/" class="link-ext" target="_blank">Visit Wikipedia</a>
-        <p><code>target="_blank"</code> เปิดลิงค์ในแท็บใหม่</p>
+        <div class="card2">
+            <a href="https://www.wikipedia.org/" target="_blank">Visit Wikipedia</a>
+            <p><code>target="_blank"</code> เปิดลิงค์ในแท็บใหม่</p>
+        </div>
+        <div class="card2">
+            <a href="https://www.google.com/?hl=th">Visit Google</a>
+            <p><code>target="_self"</code> เปิดลิงค์ในหน้าเดิม</p>
+        </div>
     </div>
 
-    <div class="card2">
-        <a href="https://www.google.com/?hl=th" class="link-ext">Visit Google</a>
-        <p><code>target="_self"</code> เปิดลิงค์ในหน้าเดิม</p>
-    </div>
-    </div>
-
-    <!-- Card 2 -->
     <div class="card1 borderclor-2">
         <h2>2. Internal Links & Anchor Links</h2>
         <pre>
@@ -176,12 +248,10 @@ p {
 &lt;a href="#jump"&gt;Jump to Section&lt;/a&gt;
 &lt;h3 id="jump"&gt;This is the jump target&lt;/h3&gt;
         </pre>
-
         <a href="#jump">Click to Jump</a>
         <h3 id="jump">This is the jump target.</h3>
     </div>
 
-    <!-- Card 3 -->
     <div class="card1 borderclor-3">
         <h2>3. Email Link</h2>
         <pre>
@@ -189,70 +259,76 @@ p {
 Send an Email
 &lt;/a&gt;
         </pre>
-
         <a href="mailto:664259004@wabmai.npru.ac.th?subject=Hello">Send an Email</a>
     </div>
 
-    <!-- Card 4 -->
     <div class="card1 borderclor-4">
         <h2>4. Download Links</h2>
         <pre>
 &lt;a href="files/sample.txt" download&gt;Download File&lt;/a&gt;
         </pre>
-
         <a href="index.html" download>Download Text File</a>
         <p>ต้องมีไฟล์ในโฟลเดอร์จึงดาวน์โหลดได้จริง</p>
     </div>
 
-    <!-- Card 5 -->
     <div class="card1 borderclor-5">
         <h2>5. Button Links</h2>
         <div class="card2">
-        <p>ลิงก์ที่ออกแบบให้คล้ายปุ่ม เหมาะกับการสมัคร ปุ่มอานเพิ่มเติม หรือปุ่มนำทาง</p>
-        <pre>
+            <p>ลิงก์ที่ออกแบบให้คล้ายปุ่ม เหมาะกับการสมัคร ปุ่มอานเพิ่มเติม หรือปุ่มนำทาง</p>
+            <pre>
 &lt;a href="https://www.example.com" class="btn-link"&gt;
 Visit Website
 &lt;/a&gt;
-        </pre>
-        <a href="https://www.example.com" class="btn-link">
-<button onclick="location.href='index.html'">HTML Tutorial</button>
-</a>
+            </pre>
+            <button onclick="location.href='index.html'">HTML Tutorial</button>
         </div>
 
-       <div class="card2">
-         <p> สร้างปุ่มด้วยเเท็ก <code>button</code></p>
-         <pre>
+        <div class="card2">
+            <p> สร้างปุ่มด้วยเเท็ก <code>button</code></p>
+            <pre>
 &lt;button onclick="document.location='index.html'"&gt;HTML Tutorial&lt;/button&gt;
-- มักใช้เมื่อลิงก์ไป หน้าในเว็บเดียวกัน
-- ผูกกับ DOM (document) โดยตรง
-&lt;button onclick="location.href='https://www.example.com'"&gt;Visit Website&lt;/button&gt;
-- นิยมใช้มากกว่า
-- เหมาะทั้งลิงก์ ภายในและภายนอกเว็บ
-- ผูกกับ window โดยตรง</pre>
-        <button onclick="location.href='index.html'">HTML Tutorial</button>
-        <button onclick="location.href=`https://courses.npru.ac.th/course/view.php?id=572` ">Visit Website</button>
+&lt;button onclick="location.href='https://www.example.com'"&gt;Visit Website&lt;/button&gt;</pre>
+            <button onclick="location.href='index.html'">HTML Tutorial</button>
+            <button onclick="location.href=`https://courses.npru.ac.th/course/view.php?id=572` ">Visit Website</button>
         </div>
-        
-</div>
-    <!-- Card 6 -->
+    </div>
+
     <div class="card1 borderclor-6">
         <h2>6. Image Link</h2>
         <p>คลิกที่รูปภาพเพื่อเปิดลิงก์</p>
-
         <pre>
 &lt;a href="https://youtube.com"&gt;
 &lt;img src="images/sample.jpg" width="250"&gt;
 &lt;/a&gt;
         </pre>
-
         <a href="https://youtu.be/Zi_XLOBDo_Y?si=B2oZrdH1oYc-666Y" target="_blank">
-            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAe1BMVEX/////AAD/19f/Skr/3Nz/z8//6+v/Jib/t7f//Pz/oqL/w8P/k5P/8PD/x8f/v7//hIT/QED/f3//NDT/d3f/9vb/ZWX/5ub/r6//Gxv/q6v/Pz//V1f/FBT/ZGT/KSn/bW3/XV3/TU3/np7/i4v/cXH/ICD/MDD/FxcDd+ztAAADl0lEQVR4nO3ciW6iUBSAYXYUBEFZ1Gpb7eb7P+FAtNNl2tQL9Rxx/i+ZZFJnjH8q2+VeLAsAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgZN8qgUXsNx/F9f5qm0+ZPPI3bvzQ/8B2nfdFr/1nZ/gftD/2jOnDiOF1E0STLivvbauvmeX4ThuHdZml/Zbm5a1/Nc9fdVrf3xewxiqJFGqdBXWrHfDL2VlkVfp3RzT6sspV3Kb9Vb7ILfzHuTbibeNpxjbrYnCXvYP9UaweuzvPrexOudAMnZ+5rTTQDM4FA2870AlORQNueagUGuVChGygVSmyEB0qbYnIjVniTqBSOxAJte6RSOBMsnGkElnJf0uZrqnEq7gkG2rbGCepCtHChUCh3rGgpHC/GlWjhvULhWrRwLX81XEvuSm07lz/m13PRwhf5K2Hhwrl8oWMy8PTcu3DpiBf6JoWjrO9gztKXLzT5zJ5V3/cr3MgXxiafr/mKlXG/DTe++MLGQ59G+UKj09LjbqIuuhfKn5iuOhQ2W2/ncz35YdOoU6FVRh2Hr6KhFFpW0u2iRL7QaAzj4+Ha7zL+IT+OYbTT+HxCsnCNC4thFTZHjrtrL7Q8w6/q8AqbzXFr8haVdKBldIn/9YVBaXLzUb7QaF/x3aVP8HDyFYorWtf6lcLmMnN74rXjYAtP3qCHWjh2Tt2eB1oYFCePbwyyMDHZlw6x0N+ZvMXwCp2tyRsMrzCITM9LB1a4MJ9JJV9oNBzxsTDtMrK4Ey/cdi30ul3jD+baoow6jvAPpXC07danUWg0ae9Y6PQYL5Uv7DDW9tC9T+NGvmlhuXrpE6gwmmg05u1ZTs97Twpj3kZ3Zkb9p9rK35kxun/Y/x6wwv1D79xT2D8K5ad9Xf9MhcR8YL4PV2EOreysL/nhUqmVCK80ViT0OkMx9qBQKDnNW2eidy1aqLHA6/rneV//XP3/YL1FInfeFuqsmbn+dU9Wfc71se/t1ZbKToUKNRZbHMnsTmeaq9avfh1wc8g49zrSXOdA8U7w2H+I4nvPj1oLZN9Loio/x151k1eR0nHwH+MkjYr1fP9rcfv5ulj4yaU8F+OvIKjjOI0aWVY83VZr9/Bsk/Cbk59N+9I8z3N3V1VVkWXR4dkmdXAJX82ftM+bSV6fT+O1T6Px03T06vh8mvalun08TTKIx9MAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAHA9/gCnXT4ie20d+AAAAABJRU5ErkJggg=="
-                 alt="รูปภาพ" width="250">
+            <img src="data:image/png;base64,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" alt="รูปภาพ" width="250">
         </a>
-        
-            <div class="note" style="border-left: 4px solid brown;">หากต้องการใช้รูปของตนเอง ให้เก็บไว้ในโฟลเดอร์ <code>images/photo.png</code></div>
+        <div class="note" style="border-left: 4px solid brown;">หากต้องการใช้รูปของตนเอง ให้เก็บไว้ในโฟลเดอร์ <code>images/photo.png</code></div>
+
+        <div class="main-container">
+            <div class="card">
+                <button onclick="document.location='index.html'">HTML Tutorial</button>
+            </div>
+            <div class="card">
+                <button onclick="location.href='https://www.google.com'">Visit Website</button>
+            </div>
+            <div class="card">
+                <button>SUBSCRIBE</button>
+            </div>
+            <div class="card">
+                <button class="btn-gold-border">SUBSCRIBE</button>
+            </div>
+            <div class="card">
+                <button class="btn-hover-animation">SUBSCRIBE</button>
+            </div>
+            <div class="card">
+                <button class="btn-shimmer">SUBSCRIBE</button>
+            </div>
+        </div>
+        <a href="index.html" style="display: block; margin-top: 20px;">← Back to HTML Tutorial</a>
     </div>
-        <a href="index.html">← Back to HTML Tutorial</a>
+
 </div>
 </body>
 </html>
