@@ -1,0 +1,243 @@
+/* นำเข้า Font Kanit จาก Google Fonts ให้ถูกต้อง */
+@import url("https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500&display=swap");
+
+/* Global Style */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Kanit", sans-serif;
+  line-height: 1.6;
+  padding-bottom: 50px;
+}
+
+/* Component Styles */
+.container {
+  max-width: 1000px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #f0f8ff; /* aliceblue */
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.card {
+  background: white;
+  padding: 25px;
+  border-radius: 12px;
+  margin-bottom: 25px;
+  border-left: 8px solid #2ecc71;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.badge {
+  background-color: #27ae60;
+  color: white;
+  padding: 2px 10px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 300;
+  margin-left: 10px;
+}
+
+pre {
+  background-color: #e0e0e0;
+  color: black;
+  padding: 15px;
+  border-radius: 8px;
+  overflow-x: auto;
+  margin: 15px 0;
+  font-family: "Courier New", monospace;
+  font-size: 0.9rem;
+}
+
+code {
+  background: ;
+  padding: 2px 5px;
+  border-radius: 4px;
+}
+
+.note {
+  background-color: #fff3cd;
+  border: 1px solid #ffeeba;
+  padding: 15px;
+  border-radius: 8px;
+  color: #856404;
+  font-size: 0.9rem;
+  margin-top: 15px;
+}
+
+/* Group1 Style: Header */
+.header {
+  background-color: white;
+  padding: 40px 20px;
+  text-align: center;
+  box-shadow: 0 5px 15px rgba(0, 128, 0, 0.2);
+  margin-bottom: 30px;
+}
+
+.header h1 {
+  color: #27ae60;
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+.header ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.btn-text-link {
+  background-color: #27ae60;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  transition: 0.3s;
+}
+
+.btn-text-link:hover {
+  transform: translateY(-3px);
+  background-color: #1e8449;
+}
+
+.btn-text-link a {
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* Group 2-4: Image & Object Fit */
+.position1 img,
+.position2 img,
+.position3 img {
+  width: 150px;
+  height: 150px;
+  margin: 10px;
+  border: 4px solid #fff;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.img-fixed {
+  width: 260px;
+  height: 160px;
+  object-fit: cover; /* หัวใจหลักของบทนี้ */
+  border-radius: 8px;
+}
+
+/* กล่องสาธิต Object Fit */
+.contain,
+.fill,
+.cover {
+  width: 100%;
+  height: 250px;
+  background-color: #eee;
+  margin: 15px 0;
+  border: 2px solid #ddd;
+  overflow: hidden;
+}
+
+.contain img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+.fill img {
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+}
+.cover img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Group 5: Image Link */
+.card1 {
+  background: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  text-align: center;
+}
+
+.YT-img {
+  max-width: 300px;
+  border-radius: 15px;
+  transition: 0.4s;
+}
+
+.YT-img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 20px rgba(255, 0, 0, 0.2);
+}
+
+/* Group 6: Gallery Grid */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+  margin: 20px 0;
+}
+
+.gallery img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.gallery img:hover {
+  transform: scale(1.03);
+  cursor: pointer;
+}
+
+@media (max-width: 600px) {
+  .gallery {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+/* Group 7: Responsive */
+.card1 img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+/* Group 8: Figure */
+figure {
+  background: #f8f9fa;
+  padding: 15px;
+  border-radius: 10px;
+  border: 1px solid #dee2e6;
+}
+
+figcaption {
+  font-style: italic;
+  font-weight: 300;
+  color: #6c757d;
+  margin-top: 10px;
+}
+
+/* Group 10: Back Link */
+.back-link {
+  display: inline-block;
+  margin-top: 20px;
+  color: #27ae60;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.back-link:hover {
+  text-decoration: underline;
+}
