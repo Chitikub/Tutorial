@@ -7,6 +7,10 @@
   margin: 0;
   padding: 0;
 }
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 200px;
+}
 
 body {
   font-family: "Kanit", sans-serif;
@@ -19,7 +23,7 @@ body {
   max-width: 1000px;
   margin: 20px auto;
   padding: 20px;
-  background-color: #f0f8ff; /* aliceblue */
+  background-color: #f0f8ff;
   border-radius: 15px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
 }
@@ -32,6 +36,27 @@ body {
   border-left: 8px solid #2ecc71;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
 }
+.card.module-1 {
+  border-left-color: #0074c2;
+}
+.card.module-2 {
+  border-left-color: #00a884;
+}
+.card.module-3 {
+  border-left-color: #ff9800;
+}
+.card.module-4 {
+  border-left-color: #8e24aa;
+}
+.card.module-5 {
+  border-left-color: #ff7043;
+}
+.card.module-6 {
+  border-left-color: #df2f49;
+}
+.card.module-7 {
+  border-left-color: #5e1621;
+}
 
 .badge {
   background-color: #27ae60;
@@ -41,23 +66,23 @@ body {
   font-size: 0.8rem;
   font-weight: 300;
   margin-left: 10px;
+  vertical-align: middle;
 }
 
 pre {
-  background-color: #e0e0e0;
-  color: black;
+  background-color: #f4f6f8;
   padding: 15px;
   border-radius: 8px;
-  overflow-x: auto;
   margin: 15px 0;
-  font-family: "Courier New", monospace;
-  font-size: 0.9rem;
+  overflow-x: auto;
+  font-size: 14px;
 }
 
 code {
-  background: ;
-  padding: 2px 5px;
+  background-color: #eee;
+  padding: 2px 6px;
   border-radius: 4px;
+  font-size: 0.95em;
 }
 
 .note {
@@ -73,10 +98,14 @@ code {
 /* Group1 Style: Header */
 .header {
   background-color: white;
-  padding: 40px 20px;
+  padding: 10px 10px;
   text-align: center;
   box-shadow: 0 5px 15px rgba(0, 128, 0, 0.2);
   margin-bottom: 30px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  padding: 20px 0;
 }
 
 .header h1 {
@@ -115,6 +144,17 @@ code {
 }
 
 /* Group 2-4: Image & Object Fit */
+
+.position1 {
+  text-align: left;
+}
+.position2 {
+  text-align: center;
+}
+.position3 {
+  text-align: right;
+}
+
 .position1 img,
 .position2 img,
 .position3 img {
@@ -128,11 +168,10 @@ code {
 .img-fixed {
   width: 260px;
   height: 160px;
-  object-fit: cover; /* หัวใจหลักของบทนี้ */
+  object-fit: cover;
   border-radius: 8px;
 }
 
-/* กล่องสาธิต Object Fit */
 .contain,
 .fill,
 .cover {
@@ -142,6 +181,11 @@ code {
   margin: 15px 0;
   border: 2px solid #ddd;
   overflow: hidden;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
 }
 
 .contain img {
@@ -231,11 +275,15 @@ figcaption {
 
 /* Group 10: Back Link */
 .back-link {
-  display: inline-block;
-  margin-top: 20px;
+  display: block;
+  width: fit-content;
+  margin: 40px auto;
+  padding: 10px 20px;
   color: #27ae60;
   text-decoration: none;
   font-weight: 500;
+  background-color: rgb(210, 210, 210);
+  border-radius: 8px;
 }
 
 .back-link:hover {

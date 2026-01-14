@@ -25,8 +25,8 @@
     </div>
 
     <div class="container">
-        <div class="c">
-            <div class="card" id="s1">
+        <div class="">
+            <div class="card module-1" id="s1">
                 <h2>1) Image Basic <span class="badge">src/alt</span></h2>
                 <p>รูปภาพใน HTML ใช้แท็ก <code>img</code> โดยต้องมี <code>src</code> และควรมี <code>alt</code> เสมอ</p>
                 <pre>
@@ -44,21 +44,23 @@
                 <p class="note"><b>alt</b> สำคัญมาก: ช่วย SEO + ใช้แทนภาพเมื่อโหลดไม่ได้ + ช่วยผู้ใช้ Screen Reader</p>
             </div>
 
-            <h2 id="s2">2) Resize & Aspect Ratio object-fit</h2>
-            <p>ถ้ากำหนดทั้งความกว้างและสูง ให้ใช้ <code>object-fit</code> เพื่อไม่ให้ภาพบิด</p>
-            <pre>
+            <div class="card module-2" id="s2">
+                <h2>2) Resize & Aspect Ratio <span class="badge">object-fit</span></h2>
+                <p>ถ้ากำหนดทั้งความกว้างและสูง ให้ใช้ <code>object-fit</code> เพื่อไม่ให้ภาพบิด</p>
+                <pre>
 .img-fixed {
 width: 260px;
 height: 160px;
 object-fit: cover;
 }
-            </pre>
-            <img class="img-fixed"
-                src="https://t1.blockdit.com/photos/2019/09/5d7fc207efbbcf28c92ed07b_800x0xcover_xsoX9QgX.jpg"
-                alt="รูปภาพ">
-            <p class="note"><code>cover</code> = ครอปให้เต็มกรอบ, <code>contain</code> = เห็นภาพครบ (อาจมีขอบว่าง)</p>
+                </pre>
+                <img class="img-fixed"
+                    src="https://t1.blockdit.com/photos/2019/09/5d7fc207efbbcf28c92ed07b_800x0xcover_xsoX9QgX.jpg"
+                    alt="รูปภาพ">
+                <p class="note"><code>cover</code> = ครอปให้เต็มกรอบ, <code>contain</code> = เห็นภาพครบ (อาจมีขอบว่าง)</p>
+            </div>
 
-            <div class="card" id="s3">
+            <div class="card module-3" id="s3">
                 <h2> 3) Object fit <span class="badge">contain fill cover</span></h2>
                 <p>ตัวอย่างการใช้ <code>object-fit</code>แบบต่างๆ</p>
                 <pre>
@@ -70,7 +72,7 @@ border: 1px solid black;
 .obj-fit-image.contain { object-fit: contain; }
 .obj-fit-image.fill { object-fit: fill; }
 .obj-fit-image.cover { object-fit: cover; }
-                    </pre>
+                    </pre> 
                 <h3>ภาพต้นฉบับ</h3>
                 <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR2oIQVOMcK9rw82bItgD357xJfx_s54ZMDeQ&s"
                     alt="">
@@ -89,14 +91,15 @@ border: 1px solid black;
                     <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR2oIQVOMcK9rw82bItgD357xJfx_s54ZMDeQ&s"
                         alt="">
                 </div>
+                </div>
 
                 <div id="s4">
-                    <div class="card1">
+                    <div class="card module-4">
                         <h2> 4 Image Link <span class="badge">a+img</span></h2>
                         <p>คลิกที่รูปเพื่อเปิดลิงก์ เหมาะกับ banner / thumbnail</p>
                         <pre>
 &lt;a href="https://www.youtube.com" target="_blank"&gt;
-&lt;img src="images/banner.jpg" alt="Banner"&gt;
+    &lt;img src="images/banner.jpg" alt="Banner"&gt;
 &lt;/a&gt;
                 </pre>
                         <a href="https://www.youtube.com" target="_blank">
@@ -107,28 +110,28 @@ border: 1px solid black;
                     </div>
                 </div>
 
-                <div class="container" id="s5">
-                    <h3> 5) Image Gallery <span class="badge">grid</span></h3>
-                    <p>แสดงรูปหลายรูปด้วย Grid ให้จัดเรียงสวยและเป็นระเบียบ</p>
-                    <pre>
-.gallery { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
-.gallery img { height: 120px; object-fit: cover; }
-            </pre>
-                    <div class="gallery">
-                        <img src="1.png" alt="Image 1">
-                        <img src="2.png" alt="Image 2">
-                        <img src="3.png" alt="Image 3">
-                        <img src="4.png" alt="Image 4">
-                        <img src="5.png" alt="Image 5">
-                        <img src="6.png" alt="Image 6">
+                <div class="card module-5" id="s5">
+                        <h3> 5) Image Gallery <span class="badge">grid</span></h3>
+                        <p>แสดงรูปหลายรูปด้วย Grid ให้จัดเรียงสวยและเป็นระเบียบ</p>
+                        <pre>
+                    .gallery { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+                    .gallery img { height: 120px; object-fit: cover; }
+                                </pre>
+                        <div class="gallery">
+                            <img src= "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSpYQJjclhPMBJvX5ADArtZ2uUfv6hwz6Hc9A&s" alt="Image 1">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR3dFRO5aS_QYxjVCIJZPngSfAQsar4c3zVvg&s" alt="Image 2">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRkHNOQ9JflsKKzuYCSDdPe6zXsvskm2xS34g&s" alt="Image 3">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT_G_lfB18W_clu6piceCImcvt2eU_h6Sv18Q&s" alt="Image 4">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS185Ayb-Jnp0oGOaMxMP_DPjbA0PmoINLkjw&s" alt="Image 5">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ5MVJvrL3Myp3wDcGtoJBsIh2zP7KdvhCZdg&s" alt="Image 6">
+                        </div>
+                        <p class="note" style="color: #888; font-size: 14px; border-left: 2px solid #ddd; padding-left: 10px; margin-top: 15px;">
+                            💡 ถ้ารูปขนาดไม่เท่ากัน ใช้ <code>object-fit: cover;</code> จะช่วยให้ดูสม่ำเสมอ
+                        </p>
                     </div>
-                    <p
-                        style="color: #888; font-size: 14px; border-left: 2px solid #ddd; padding-left: 10px; margin-top: 15px;">
-                        💡 ถ้ารูปขนาดไม่เท่ากัน ใช้ <code>object-fit: cover;</code> จะช่วยให้ดูสม่ำเสมอ
-                    </p>
                 </div>
 
-                <div class="card1" id="s6">
+                <div class="card module-6" id="s6">
                     <h2>6) Responsive Images <span>max-width:100%</span></h2>
                     <p>ทำให้ภาพไม่ล้นการ์ดและย่อขยายตามหน้าจอ</p>
                     <pre>
@@ -140,31 +143,33 @@ height : auto;
                     <img src="https://images.dmc.tv/wallpaper/raw/0f2eb9c101b324815d366a.jpg" alt="รูปทะเล">
                 </div>
 
-                <div class="container" id="s7">
-                    <h3>7) Figure + Caption <span class="badge">semantic</span></h3>
-                    <p>
-                        ใช้แท็ก <code>&lt;figure&gt;</code> และ <code>&lt;figcaption&gt;</code>
-                        เพื่ออธิบายภาพ (เหมาะกับบทความ/รายงาน)
-                    </p>
-                    <pre>
-&lt;figure&gt;
-&lt;img src="image.jpg" alt="คำอธิบายรูปภาพ"&gt;
-&lt;figcaption&gt;รูปที่ 1: คำอธิบายภาพ&lt;/figcaption&gt;
-&lt;/figure&gt;
-              </pre>
-                    <figure style="margin-top: 20px; text-align: center;">
-                        <img src="https://img.freepik.com/free-photo/milford-sound-new-zealand-travel-destination-concept_53876-42945.jpg"
-                            alt="ทิวทัศน์ธรรมชาติ" style="width: 100%; max-width: 600px; border-radius: 8px;">
-                        <figcaption style="margin-top: 8px; color: #666;">
-                            รูปที่ 1: ตัวอย่างการใช้แท็ก figure และ figcaption
-                        </figcaption>
-                    </figure>
-                    <p
-                        style="color: #888; font-size: 14px; border-left: 2px solid #ddd; padding-left: 10px; margin-top: 15px;">
-                        <strong>“My Favorite Place / Product / Technology”</strong>
-                        โดยมีภาพอย่างน้อย 5 ภาพ และต้องมี caption ทุกภาพ
-                        (Gallery / Image Link พร้อม Caption)
-                    </p>
+                <div class="card module-7">
+                    <div class="container" id="s7">
+                        <h3>7) Figure + Caption <span class="badge">semantic</span></h3>
+                        <p>
+                            ใช้แท็ก <code>&lt;figure&gt;</code> และ <code>&lt;figcaption&gt;</code>
+                            เพื่ออธิบายภาพ (เหมาะกับบทความ/รายงาน)
+                        </p>
+                        <pre>
+                    &lt;figure&gt;
+                    &lt;img src="image.jpg" alt="คำอธิบายรูปภาพ"&gt;
+                    &lt;figcaption&gt;รูปที่ 1: คำอธิบายภาพ&lt;/figcaption&gt;
+                    &lt;/figure&gt;
+                                  </pre>
+                        <figure style="margin-top: 20px; text-align: center;">
+                            <img src="https://img.freepik.com/free-photo/milford-sound-new-zealand-travel-destination-concept_53876-42945.jpg"
+                                alt="ทิวทัศน์ธรรมชาติ" style="width: 100%; max-width: 600px; border-radius: 8px;">
+                            <figcaption style="margin-top: 8px; color: #666;">
+                                รูปที่ 1: ตัวอย่างการใช้แท็ก figure และ figcaption
+                            </figcaption>
+                        </figure>
+                        <p
+                            style="color: #888; font-size: 14px; border-left: 2px solid #ddd; padding-left: 10px; margin-top: 15px;">
+                            <strong>“My Favorite Place / Product / Technology”</strong>
+                            โดยมีภาพอย่างน้อย 5 ภาพ และต้องมี caption ทุกภาพ
+                            (Gallery / Image Link พร้อม Caption)
+                        </p>
+                    </div>
                 </div>
 
                 <div class="card local-image" id="s8">
