@@ -273,6 +273,10 @@ figcaption {
   margin-top: 10px;
 }
 
+.local-image{
+  background-image: url(../img/background1.jpg);
+}
+
 /* Group 10: Back Link */
 .back-link {
   display: block;
@@ -289,3 +293,4 @@ figcaption {
 .back-link:hover {
   text-decoration: underline;
 }
+
