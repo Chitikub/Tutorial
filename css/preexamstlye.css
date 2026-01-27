@@ -123,3 +123,15 @@ body {
     font-size: 14px;
     color: #888;
 }
+
+.back-link {
+  display: block;
+  width: fit-content;
+  margin: 40px auto;
+  padding: 10px 20px;
+  color: #27ae60;
+  text-decoration: none;
+  font-weight: 500;
+  background-color: rgb(210, 210, 210);
+  border-radius: 8px;
+}
